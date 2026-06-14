@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Оплата заказа — Букля</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+  (function() {
+    const theme = localStorage.getItem('biypara_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body data-page="checkout">
+
+<header class="site-header"></header>
+
+<main class="container">
+
+  <div class="page-head">
+    <h1 data-i18n="payment_method"></h1>
+    <p data-i18n="pay_sub"></p>
+  </div>
+
+  <div class="payment-layout">
+
+    <div class="payment-methods">
+      <button class="pay-method active" data-method="card" data-i18n="pay_card"></button>
+      <button class="pay-method" data-method="cash" data-i18n="pay_cash"></button>
+    </div>
+
+    <form id="payment-form" class="payment-form">
+      <input type="text" id="card-number" class="card-only" data-i18n-ph="ph_card_number" maxlength="19" required>
+      <div class="payment-row card-only">
+        <input type="text" id="card-expiry" data-i18n-ph="ph_card_exp" maxlength="5" required>
+        <input type="text" id="card-cvv" data-i18n-ph="ph_card_cvv" maxlength="4" required>
+      </div>
+      <input type="text" id="card-holder" class="card-only" data-i18n-ph="ph_card_holder" required>
+      <button type="submit" class="checkout-btn" data-i18n="pay_btn"></button>
+    </form>
+
+  </div>
+
+</main>
+
+<footer class="site-footer"></footer>
+
+<script src="script.js"></script>
+<script src="payment.js"></script>
+
+</body>
+</html>

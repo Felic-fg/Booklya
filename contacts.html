@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ky">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Байланыш — Букля</title>
+<meta name="description" content="BiyPara — китеп дүкөнү">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+  (function() {
+    const theme = localStorage.getItem('biypara_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body data-page="contacts">
+<header class="site-header"></header>
+<main>
+  <div class="container page-head">
+    <h1 data-i18n="contacts_title"></h1>
+    <p data-i18n="contacts_sub"></p>
+  </div>
+  <section class="container">
+    <div class="contacts-layout">
+      <div class="contact-card">
+        <h3 data-i18n="c_coords"></h3>
+        
+        <div class="map-container">
+          <iframe
+            title="Букля — Бишкек, Чүй пр. 114"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=74.5950%2C42.8740%2C74.6050%2C42.8800&layer=mapnik&marker=42.8770,74.6000"
+            style="width:100%; height:320px; border:0; display:block; filter: saturate(0.95);"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+          <div style="padding:14px 18px; background:var(--bg); display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; border-top:1px solid var(--line)">
+            <span style="color:var(--ink); font-size:14px; font-weight:500">
+              <i class="fa-solid fa-location-dot" style="color:var(--accent); margin-right:6px"></i>
+              Бишкек, Чүй пр. 114
+            </span>
+            <a class="btn btn-primary" style="padding: 8px 14px; font-size: 13px; border-radius: 8px;" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/dir/?api=1&destination=42.8770,74.6000">
+              <i class="fa-solid fa-diamond-turn-right" style="margin-right: 4px;"></i> Map
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-row"><span class="lbl" data-i18n="c_phone"></span><span class="val">+996 (700) 123-456</span></div>
+        <div class="contact-row"><span class="lbl" data-i18n="c_wa"></span><span class="val">+996 (550) 123-456</span></div>
+        <div class="contact-row"><span class="lbl" data-i18n="c_email"></span><span class="val">booklya@gmail.com</span></div>
+        <div class="contact-row"><span class="lbl" data-i18n="c_hours"></span><span class="val">09:00–20:00</span></div>
+        <div class="contact-row"><span class="lbl" data-i18n="c_insta"></span><span class="val">@booklya.kg</span></div>
+      </div>
+
+      <div class="contact-card">
+        <h3 data-i18n="c_send"></h3>
+        <form id="contact-form" class="contact-form">
+          <input type="text" required data-i18n-ph="c_name">
+          <input type="tel" required placeholder="+996 (___) ___-___">
+          <textarea required data-i18n-ph="c_msg"></textarea>
+          <button type="submit" class="btn btn-primary" style="align-self: flex-start; padding: 12px 24px;" data-i18n="c_send_btn"></button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"></footer>
+<script src="script.js"></script>
+</body>
+</html>

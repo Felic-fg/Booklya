@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ky">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Букля — Китеп дүкөнү | Кыргызстан</title>
+<meta name="description" content="Букля — онлайн китеп дүкөнү Кыргызстанда">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+  (function() {
+    const theme = localStorage.getItem('biypara_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body data-page="index">
+<header class="site-header"></header>
+<main>
+  <section class="hero container">
+    <div>
+      <h1><span data-i18n="hero_title_a"></span> <em data-i18n="hero_title_em"></em> <span data-i18n="hero_title_b"></span></h1>
+      <p data-i18n="hero_text"></p>
+      <div class="hero-cta">
+        <a href="#catalog" class="btn btn-primary" data-i18n="hero_btn_catalog"></a>
+        <a href="about.html" class="btn btn-ghost" data-i18n="hero_btn_about"></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="book-stack">
+        <div class="b b1" style="background-image: url('images/жамиля.jpg');">
+          <div class="overlay">
+            <div class="a">Чыңгыз Айтматов</div>
+            <div class="t">Жамийла</div>
+          </div>
+        </div>
+        <div class="b b2" style="background-image: url('images/manas.jpg');">
+          <div class="overlay">
+            <div class="a">Эпос</div>
+            <div class="t">Манас</div>
+          </div>
+        </div>
+        <div class="b b3" style="background-image: url('images/математика 6 класс.jpg');">
+          <div class="overlay">
+            <div class="a">Окуу</div>
+            <div class="t">Математика 6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slider-section container">
+    <div id="slider" class="slider"></div>
+  </section>
+
+  <section id="catalog" class="container">
+    <div class="section-head">
+      <div>
+        <h2 data-i18n="catalog_title"></h2>
+        <p data-i18n="catalog_sub"></p>
+      </div>
+    </div>
+    <div class="filters">
+      <button class="chip active" data-filter="all" data-i18n="f_all"></button>
+      <button class="chip" data-filter="study" data-i18n="f_study"></button>
+      <button class="chip" data-filter="fiction" data-i18n="f_fiction"></button>
+      <button class="chip" data-filter="kids" data-i18n="f_kids"></button>
+    </div>
+    <div id="catalog-grid" class="grid"></div>
+  </section>
+</main>
+<footer class="site-footer"></footer>
+<script src="script.js"></script>
+</body>
+</html>
